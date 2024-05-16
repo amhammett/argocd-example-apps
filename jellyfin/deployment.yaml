@@ -20,3 +20,4 @@ spec:
         image: docker.io/jellyfin/jellyfin
         ports:
         - containerPort: 8096
+      restartPolicy: Always
