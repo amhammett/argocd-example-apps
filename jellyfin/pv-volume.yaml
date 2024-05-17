@@ -10,5 +10,5 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteMany
-  # hostPath:
-  #   path: "/mnt/data"
+  hostPath:
+    path: /data/jellyfin-config/
