@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: jellyfin-config
+  name: jellyfin-config-claim
   labels:
-    type: local
+    app: jellyfin
 spec:
-  storageClassName: standard
-  capacity:
-    storage: 1Gi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
+  capacity:
+    storage: 10Mi
   hostPath:
     path: /data/jellyfin-config/
