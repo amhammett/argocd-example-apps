@@ -22,8 +22,9 @@ spec:
         - containerPort: 8096
       restartPolicy: Always
       volumeMounts:
-      - name: media
-        mountPath: /mnt/media
-      # - name: jellyfin-config
-      #   persistentVolumeClaim:
-      #     claimName: jellyfin-config
+      - name: jellyfin-config
+        mountPath: /config
+      volumes:
+      - name: jellyfin-config
+        persistentVolumeClaim:
+          claimName: jellyfin-config
